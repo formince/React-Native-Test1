@@ -1,14 +1,16 @@
 import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
+import WelcomePage from "../screens/WelcomePage";
 import LoginScreen from "../screens/LoginScreen";
-import WelcomeScreen from "../screens/WelcomeScreen";
+import StudentDashboard from "../screens/StudentDashboard";
+import TeacherDashboard from "../screens/TeacherDashboard";
 
 const Stack = createStackNavigator();
 
 export default function StackNavigator() {
   return (
     <Stack.Navigator
-      initialRouteName="Login"
+      initialRouteName="Welcome"
       screenOptions={{
         headerStyle: {
           backgroundColor: '#2196F3',
@@ -20,15 +22,28 @@ export default function StackNavigator() {
       }}
     >
       <Stack.Screen 
+        name="Welcome" 
+        component={WelcomePage}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen 
         name="Login" 
         component={LoginScreen}
         options={{ headerShown: false }}
       />
       <Stack.Screen 
-        name="Welcome" 
-        component={WelcomeScreen}
+        name="StudentDashboard" 
+        component={StudentDashboard}
         options={{ 
-          title: 'Ana Sayfa',
+          title: 'Öğrenci Paneli',
+          headerLeft: () => null 
+        }}
+      />
+      <Stack.Screen 
+        name="TeacherDashboard" 
+        component={TeacherDashboard}
+        options={{ 
+          title: 'Öğretmen Paneli',
           headerLeft: () => null 
         }}
       />
