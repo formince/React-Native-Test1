@@ -341,7 +341,7 @@ const StudentDashboard: React.FC = () => {
                 [
                   { title: 'Online Ders', content: 'Yarınki Matematik dersi online yapılacaktır.', date: '5 Mayıs' },
                   { title: 'Proje Teslimi', content: 'Programlama projesi son teslim tarihi uzatılmıştır.', date: '3 Mayıs' },
-                  { title: 'Sınav Duyurusu', content: 'Fizik sınavı 15 Mayıs tarihinde yapılacaktır. Tüm konular dahildir.', date: '1 Mayıs' },
+                  { title: 'Sınav Duyurusuu', content: 'Fizik sınavı 15 Mayıs tarihinde yapılacaktır. Tüm konular dahildir.', date: '1 Mayıs' },
                   { title: 'Okul Gezisi', content: 'Bilim Müzesi gezisi 20 Mayıs tarihinde gerçekleştirilecektir.', date: '29 Nisan' },
                 ].map((item, index) => (
                   <View key={index} style={styles.announcementItem}>
